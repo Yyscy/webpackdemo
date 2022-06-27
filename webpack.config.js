@@ -29,5 +29,15 @@ module.exports = {
     devServer: {
         port: 2017, // 端口号
         open: false,//开启是否跳转到浏览器
+    },
+    // 加载器 
+    module: {
+        rules: [ // loader的规则
+            {
+                test: /\.css$/, // 匹配所有的css文件
+                // loader 执行的顺序： use数组里从右向左运行s
+                use: ["style-loader", "css-loader"]
+            }
+        ]
     }
 }
