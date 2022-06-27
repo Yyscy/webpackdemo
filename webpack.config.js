@@ -1,7 +1,7 @@
 const path = require("path")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-
+const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
 
@@ -24,6 +24,7 @@ module.exports = {
         // 默认情况下dist
         // 删除的是ouput path 里配置的那个输出文件的文件夹
         new CleanWebpackPlugin(),
+        new VueLoaderPlugin()
     ],
     // 服务器
     devServer: {
@@ -85,7 +86,17 @@ module.exports = {
                         presets: ['@babel/preset-env'] // 预设:转码规则(用bable开发环境本来预设的)
                     }
                 }
+            },
+            {
+                test: /\.vue$/,
+                use:{
+                    loader: 'vue-loader'
+                }
+                
             }
         ]
-    }
+    },
+
+
+
 }
