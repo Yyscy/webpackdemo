@@ -19,3 +19,5 @@ import imgUrl1 from './assets/1.gif'
 const theImg = document.createElement("img")
 theImg.src = imgUrl1
 document.body.appendChild(theImg)
+
+import './assets/fonts/iconfont.css'
