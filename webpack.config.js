@@ -24,5 +24,10 @@ module.exports = {
         // 默认情况下dist
         // 删除的是ouput path 里配置的那个输出文件的文件夹
         new CleanWebpackPlugin(),
-    ]
+    ],
+    // 服务器
+    devServer: {
+        port: 2017, // 端口号
+        open: false,//开启是否跳转到浏览器
+    }
 }
