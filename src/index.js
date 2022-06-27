@@ -21,3 +21,15 @@ theImg.src = imgUrl1
 document.body.appendChild(theImg)
 
 import './assets/fonts/iconfont.css'
+
+class App {
+    static a = 123
+}
+
+console.log('==qqq', App.a)
+
+const fn = () => {
+    console.log('======')
+}
+
+fn()
